@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body style="background: #90c0de;">
+    <style>
+        .bg{
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(9, 127, 186);
+        }
+        form{
+            text-align: start;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(251, 137, 24);
+        }
+        button{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(255, 255, 255);
+            background-color: rgb(89, 60, 176);
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            margin-top: 10px;
+            margin-left: 450px;
+        }
+        button:hover{
+            background-color: rgb(5, 119, 241);
+            color: rgb(255, 255, 255);
+        }
+        label{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(4, 116, 118);
+        }
+        input{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(0, 17, 18);
+            padding: 5px;
+            border-radius: 10px;
+            border: none;
+            background-color: #acd3eb;   
+        }
+        input:hover{
+            background-color: rgb(237, 237, 237);
+            color: rgb(0, 0, 0);
+        }
+        
+    </style>
+    <h1>Web Series</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" style="margin-left: 200px;">
+        <br>
+        <label for="email">Gitam mail ID:</label>
+        <input type="email" id="email" style="margin-left: 133px;">
+        <br>
+        <label for="regno">Registration Number:</label>
+        <input type="number" id="regno" style="margin-left: 71px;">
+        <br>
+        <label for="branch">Branch:</label>
+        <input type="text" id="branch" style="margin-left: 191px;">
+        <br>
+        <label for="year">Year:</label>
+        <input type="number" id="year" style="margin-left: 214px;">
+        <br>
+        <label for="terms">Terms and Conditions</label>
+        <input type="checkbox" id="terms" style="margin-left: 70px; transform: scale(1.5);">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="output"></div>
+    <script>
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let regno = document.getElementById("regno");
+        let branch = document.getElementById("branch");
+        let year = document.getElementById("year");
+        let terms = document.getElementById("terms");
+        let output = document.getElementById("output");
+        let submit = document.querySelector("button");
+        submit.addEventListener("click", function(e){
+            e.preventDefault();
+            output.innerHTML = `<h2>Details</h2>
+            <p>Name: ${name.value}</p>
+            <p>Email: ${email.value}</p>
+            <p>Registration Number: ${regno.value}</p>
+            <p>Branch: ${branch.value}</p>
+            <p>Year: ${year.value}</p>
+            <p>Terms and Conditions: ${terms.checked}</p>`;
+        });
+    </script>
+</body>
+</html>

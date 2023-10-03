@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity</title>
+</head>
+<body>
+    <div>
+        <div class="main">
+            <h1>What Can Javascript Do?</h1>
+            <p class="type" id="chngcolor">JavaScript can change the color of a HTML element.</p>
+        </div>
+        <br>
+        <button type="button" class="button1" onclick="changetext()">Click Me!</button>
+        <button type="button" class="button1" onclick="reset()">RESET!</button>
+        </br>
+        <script>
+            function changetext() 
+            {
+                document.getElementById("chngcolor").style = "background-color:rgb(255, 0, 0)";
+            }
+        </script>
+        <script>
+            function reset() 
+            {
+                document.getElementById("chngcolor").style = "background-color:rgb(255, 255, 255)";
+            }
+        </script>
+    </div>
+</body>
